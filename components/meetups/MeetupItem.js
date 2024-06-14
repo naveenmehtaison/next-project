@@ -1,7 +1,13 @@
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 function MeetupItem(props) {
+  const router = useRouter()
+  const showDetailHandler =()=>{
+    router.push('/'+ props.id)
+  }
+
   return (
     <li className={classes.item}>
       <Card>
@@ -13,9 +19,8 @@ function MeetupItem(props) {
           <address>{props.address}</address>
         </div>
         <div className={classes.actions}>
-          <Link href={`/m1`}>
-          <button >Show Details</button>
-          </Link>
+
+          <button onClick={showDetailHandler}>Show Details</button>
         </div>
       </Card>
     </li>

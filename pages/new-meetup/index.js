@@ -19,15 +19,10 @@ function NewMeetup() {
         throw new Error('Something went wrong!');
       }
 
-      // Optionally, if you need the response data
-      // const data = await response.json();
-      // console.log(data);
-
-      // Navigate to home page after successful submission
       router.push('/');
     } catch (error) {
       console.error('Error adding meetup:', error);
-      // Handle error if necessary
+
     }
   }
 

@@ -12,5 +12,6 @@ const handler=async (req,res)=>{
          res.status(201).json({message:'meetup inserted'})
     }
 
+
 }
 export default handler
