@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
@@ -52,7 +52,7 @@ function NewMeetupForm(props) {
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button type='submit'>Add Meetup</button>
         </div>
       </form>
     </Card>
